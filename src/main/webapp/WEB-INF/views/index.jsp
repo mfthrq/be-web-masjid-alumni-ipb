@@ -225,13 +225,27 @@
       <p class="text-white mb-5">
         Berikut adalah jadwal sholat Kota Bogor (WIB)
       </p>
-      <div class="row" id="jadwalsholat">
-        <!-- DATA DIAMBIL DARI JADWALSHOLAT.JSON -->
-        <!-- DATA DIAMBIL DARI JADWALSHOLAT.JSON -->
-        <!-- DATA DIAMBIL DARI JADWALSHOLAT.JSON -->
-        <!-- DATA DIAMBIL DARI JADWALSHOLAT.JSON -->
-        <!-- DATA DIAMBIL DARI JADWALSHOLAT.JSON -->
-        <!-- DATA DIAMBIL DARI JADWALSHOLAT.JSON -->
+      <div class="row">
+        <div class="col wow fadeInUp">
+          <h2 class="text-white sm:">Subuh</h2>
+          <h5 class="text-white">04:34</h5>
+        </div>
+        <div class="col wow fadeInUp">
+          <h2 class="text-white">Zuhur</h2>
+          <h5 class="text-white">11:49</h5>
+        </div>
+        <div class="col wow fadeInUp">
+          <h2 class="text-white">Ashar</h2>
+          <h5 class="text-white">15:11</h5>
+        </div>
+        <div class="col wow fadeInUp">
+          <h2 class="text-white">Maghrib</h2>
+          <h5 class="text-white">17:43</h5>
+        </div>
+        <div class="col wow fadeInUp">
+          <h2 class="text-white">Isya</h2>
+          <h5 class="text-white">18:56</h5>
+        </div>
       </div>
     </div>
     <!-- Jadwal Sholat End -->
