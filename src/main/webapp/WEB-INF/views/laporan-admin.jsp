@@ -39,11 +39,12 @@
 
     <!-- Template Stylesheet -->
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" />
-    <link href="${pageContext.request.contextPath}/css/sidebar.css" rel="stylesheet" />
+
     <style>
         body {
             margin: 0;
             font-family: "Lato", sans-serif;
+            background-color: #ffffff;
         }
 
         .sidebar {

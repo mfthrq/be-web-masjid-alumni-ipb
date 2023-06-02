@@ -42,6 +42,7 @@
         body {
             margin: 0;
             font-family: "Lato", sans-serif;
+            background-color: #ffffff;
         }
 
         .sidebar {
