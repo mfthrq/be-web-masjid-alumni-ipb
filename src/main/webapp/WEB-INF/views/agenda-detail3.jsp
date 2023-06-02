@@ -158,7 +158,7 @@ class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5"
                     <div class="img-post">
                       <img src="/img/contoh-agenda-3.jpg" alt="Agenda" />
                     </div>
-                    <a href="/agenda-detail2.html" class="btn btn-primary">Detail Agenda</a>
+                    <a href="/agenda-detail2" class="btn btn-primary">Detail Agenda</a>
                   </div>
                 </div>
               </div>

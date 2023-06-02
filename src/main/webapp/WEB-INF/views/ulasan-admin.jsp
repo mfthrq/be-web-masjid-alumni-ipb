@@ -37,50 +37,122 @@
 
     <!-- Template Stylesheet -->
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #009BEE;
+            color: white;
+        }
+
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <p>Status Connection : <b> ${connStatus == "Connected" ? "<font color='green'>Connected</font>" : "<font color='red'>Disconnected</font>"} ${connMessage}</b></p>
-    <p>
-        Jumlah Data : ${data.size()}
-    </p>
+<div class="sidebar">
+    <div class="p-5 border-bottom border-3 border-dark mb-3">
+        <h4 class="text-center">MAI Admin</h4>
+    </div>
+    <a href="/laporan-admin">Laporan</a>
+    <a  class="active" href="/ulasan-admin">Ulasan</a>
+</div>
+
+<div class="content">
     <div class="container-xxl py-5">
-        <h1 class="text-center">Ulasan Admin</h1>
-        <div class="d-flex justify-content-center mb-3">
-            <a href="/laporan-admin" class="btn btn-info">Laporan Admin</a>
-        </div>
+        <h1 class="text-center mb-5">Ulasan Admin</h1>
         <div class="container d-flex justify-content-center">
             <table class="table">
                 <thead class="table-dark">
-                    <tr>
-                        <td>No</td>
-                        <td>Id Review</td>
-                        <td>Nama Review</td>
-                        <td>Email Review</td>
-                        <td>Selected Rating</td>
-                        <td>Deskripsi Review</td>
-                        <td>Aksi</td>
-                    </tr>
+                <tr class="text-center">
+                    <td colspan="3">
+                        <p>Status Connection : <b> ${connStatus == "Connected" ? "<font color='#20fa2f'>Connected</font>" : "<font color='red'>Disconnected</font>"} ${connMessage}</b></p>
+                    </td>
+                    <td colspan="4">
+                        <p>
+                            Jumlah Data : ${data.size()}
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>ID Review</td>
+                    <td>Nama Review</td>
+                    <td>Email Review</td>
+                    <td>Selected Rating</td>
+                    <td>Deskripsi Review</td>
+                    <td>Aksi</td>
+                </tr>
                 </thead>
                 <tbody>
-                    <% for (int i = 0; i < d.size(); i++){ %>
-                        <tr>
-                            <td><%= i+1 %></td>
-                            <td><%= d.get(i).getId_review() %></td>
-                            <td><%= d.get(i).getNama_review() %></td>
-                            <td><%= d.get(i).getEmail_review() %></td>
-                            <td><%= d.get(i).getSelected_rating() %></td>
-                            <td><%= d.get(i).getDeskripsi_review() %></td>
-                            <td>
-                                <a href="/edit-ulasan?id_review=<%= d.get(i).getId_review() %>" class="btn btn-primary">Edit</a>
-                                <a href="/delete-ulasan?id_review=<%= d.get(i).getId_review() %>" onclick="return confirm('Apakah anda yakin untuk menghapus data ?')" class="btn btn-danger">Delete</a>
-                            </td>
-                        </tr>
-                    <% } %>
+                <% for (int i = 0; i < d.size(); i++){ %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= d.get(i).getId_review() %></td>
+                    <td><%= d.get(i).getNama_review() %></td>
+                    <td><%= d.get(i).getEmail_review() %></td>
+                    <td><%= d.get(i).getSelected_rating() %></td>
+                    <td><%= d.get(i).getDeskripsi_review() %></td>
+                    <td>
+                        <a href="/edit-ulasan?id_review=<%= d.get(i).getId_review() %>" class="btn btn-primary">Edit</a>
+                        <a href="/delete-ulasan?id_review=<%= d.get(i).getId_review() %>" onclick="return confirm('Hapus Data Ini?')" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <% } %>
                 </tbody>
             </table>
         </div>
     </div>
+
+</div>
+
 </body>
 
 </html>

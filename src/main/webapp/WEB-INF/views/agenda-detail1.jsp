@@ -161,7 +161,7 @@
                     <div class="img-post">
                       <img src="/img/contoh-agenda-1.jpg" alt="Agenda" />
                     </div>
-                    <a href="/agenda-detail.html" class="btn btn-primary">Detail Agenda</a>
+                    <a href="/agenda-detail" class="btn btn-primary">Detail Agenda</a>
                   </div>
                 </div>
               </div>
