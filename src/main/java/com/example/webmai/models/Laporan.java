@@ -5,11 +5,14 @@ public class Laporan {
     private String nama_report;
     private String email_report;
     private String deskripsi_report;
-
+    
     public Laporan() {
     }
 
-    public Laporan(Integer id_report, String nama_report, String email_report, String deskripsi_report) {
+    public Laporan(Integer id_report, 
+    String nama_report, 
+    String email_report, 
+    String deskripsi_report) {
         this.id_report = id_report;
         this.nama_report = nama_report;
         this.email_report = email_report;
