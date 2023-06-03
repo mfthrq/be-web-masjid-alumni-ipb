@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.webmai.models.Laporan" %>
-<% 
+<%
     List<Laporan> d = (List<Laporan>) request.getAttribute("data");
 %>
 
@@ -115,25 +115,25 @@
     <div class="container-xxl py-5">
         <h1 class="text-center mb-5">Laporan Admin</h1>
         <div class="container d-flex justify-content-center">
-            <table class="table">
-                <thead class="table-dark">
+            <table class="table table-striped text-center">
+                <thead>
                 <tr class="text-center">
-                    <td colspan="3">
-                        <p>Status Connection : <b> ${connStatus == "Connected" ? "<font color='#20fa2f'>Connected</font>" : "<font color='red'>Disconnected</font>"} ${connMessage}</b></p>
-                    </td>
-                    <td colspan="3">
+                    <th>
                         <p>
                             Jumlah Data : ${data.size()}
                         </p>
-                    </td>
+                    </th>
+                    <th colspan="2">
+                        <p>Status Connection : <b> ${connStatus == "Connected" ? "<font color='#20fa2f'>Connected</font>" : "<font color='red'>Disconnected</font>"} ${connMessage}</b></p>
+                    </th>
                 </tr>
                 <tr>
-                    <td>No</td>
-                    <td>ID Report</td>
-                    <td>Nama Report</td>
-                    <td>Email Report</td>
-                    <td>Deskripsi Report</td>
-                    <td>Aksi</td>
+                    <th>No</th>
+                    <th>ID Report</th>
+                    <th>Nama Report</th>
+                    <th>Email Report</th>
+                    <th>Deskripsi Report</th>
+                    <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>

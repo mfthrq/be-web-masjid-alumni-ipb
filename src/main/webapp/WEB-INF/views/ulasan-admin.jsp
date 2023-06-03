@@ -110,26 +110,26 @@
     <div class="container-xxl py-5">
         <h1 class="text-center mb-5">Ulasan Admin</h1>
         <div class="container d-flex justify-content-center">
-            <table class="table">
-                <thead class="table-dark">
+            <table class="table table-striped text-center">
+                <thead>
                 <tr class="text-center">
-                    <td colspan="3">
-                        <p>Status Connection : <b> ${connStatus == "Connected" ? "<font color='#20fa2f'>Connected</font>" : "<font color='red'>Disconnected</font>"} ${connMessage}</b></p>
-                    </td>
-                    <td colspan="4">
+                    <th colspan="2">
                         <p>
                             Jumlah Data : ${data.size()}
                         </p>
-                    </td>
+                    </th>
+                    <th colspan="2">
+                        <p>Status Connection : <b> ${connStatus == "Connected" ? "<font color='#20fa2f'>Connected</font>" : "<font color='red'>Disconnected</font>"} ${connMessage}</b></p>
+                    </th>
                 </tr>
                 <tr>
-                    <td>No</td>
-                    <td>ID Review</td>
-                    <td>Nama Review</td>
-                    <td>Email Review</td>
-                    <td>Selected Rating</td>
-                    <td>Deskripsi Review</td>
-                    <td>Aksi</td>
+                    <th>No</th>
+                    <th>ID Review</th>
+                    <th>Nama Review</th>
+                    <th>Email Review</th>
+                    <th>Selected Rating</th>
+                    <th>Deskripsi Review</th>
+                    <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
