@@ -112,7 +112,7 @@
         Donasi
       </h1>
       <div class="row mb-5">
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-4 col-md-6 wow fadeInUp mt-3" data-wow-delay="0.1s">
           <div class="team-item rounded">
             <div class="text-center p-4">
               <h5>7074 13 6642</h5>
@@ -121,7 +121,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-4 col-md-6 wow fadeInUp mt-3" data-wow-delay="0.1s">
           <div class="team-item rounded">
             <div class="text-center p-4">
               <h5>7074 13 5948</h5>
@@ -130,7 +130,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-4 col-md-6 wow fadeInUp mt-3" data-wow-delay="0.1s">
           <div class="team-item rounded">
             <div class="text-center p-4">
               <h5>7733 66 5577</h5>
